@@ -1,0 +1,13 @@
+# OMC runtime state
+.omc/
+
+# Android build
+*.iml
+.gradle/
+build/
+local.properties
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
