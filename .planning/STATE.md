@@ -1,122 +1,55 @@
 # Project State
 
 **Project:** Android Kotlin 베리어프리 접근성 데모 앱
-**Last Updated:** 2026-05-07 (Phase 1~5 산출물 모두 완료, Release Checklist 9 액션은 사용자 환경)
+**Last Updated:** 2026-05-07 (v1 milestone shipped + archived)
 
 ---
 
-## Project Reference
+## Current Milestone
 
-- **PROJECT.md:** `.planning/PROJECT.md` (core value, constraints, key decisions)
-- **REQUIREMENTS.md:** `.planning/REQUIREMENTS.md` (32 v1 requirements + traceability)
-- **ROADMAP.md:** `.planning/ROADMAP.md` (5 phases, coarse granularity)
-- **Research:** `.planning/research/SUMMARY.md` (HIGH confidence, build order §6)
-- **PRD:** `PRD.md` (P0/P1/P2 + Day 1-6 timeline §8)
-
-**Core Value:** 평가자가 GitHub README와 시연 GIF를 90초 안에 훑고 "이 사람 Android Accessibility 진짜 만들 줄 안다"고 결론짓게 하는 것. 다른 모든 가치보다 이 인지 전환이 우선한다.
-
-**Hard Deadline:** 2026-05-15 (GitHub push + Notion + 위시켓 재제출). 공고 마감 2026-05-20.
-
----
-
-## Current Position
+**Active:** none — v1 closed.
 
 | Field | Value |
 |-------|-------|
-| **Current phase** | — (all phases complete) |
-| **Next phase** | Release Checklist (사용자 환경) |
-| **Current plan** | 모든 Phase 산출물 + README 마감 완료 |
-| **Status** | Phase 1~5 ✅ — gradle wrapper jar 생성, AVD 검증, GIF 캡처, GitHub push, Notion, 위시켓 재제출 = 사용자 액션 |
-| **Progress** | 5 / 5 phases complete |
-
-```
-[████████████████████] 100% (5/5 phases)
-```
+| Last shipped | v1 (2026-05-07) |
+| Next milestone | TBD — `/gsd-new-milestone v2` |
+| Repo | https://github.com/Taek-D/android-barrier-free-kiosk-demo |
+| Tag | `v1` |
 
 ---
 
-## Phase Pipeline
+## Shipped Milestones
 
-| # | Phase | Status | Risk | UI |
-|---|-------|--------|------|-----|
-| 1 | Foundation | ✅ Complete (human-needed) | 🟢 Low | yes |
-| 2 | TTS + Theme | ✅ Complete (human-needed) | 🟡 Med | yes |
-| 3 | Focus & Keypad | ✅ Complete (human-needed) | 🔴 **HIGH** | yes |
-| 4 | Media & Checklist | ✅ Complete (human-needed) | 🟢 Low | yes |
-| 5 | Ship | ✅ Complete (human-needed: Release Checklist) | 🟡 Med | no |
+| Version | Date | Phases | Requirements | Archive |
+|---------|------|-------:|-------------:|---------|
+| **v1** | 2026-05-07 | 5 | 32/32 ✅ | [`milestones/v1-ROADMAP.md`](milestones/v1-ROADMAP.md) · [`milestones/v1-REQUIREMENTS.md`](milestones/v1-REQUIREMENTS.md) |
 
 ---
 
-## Performance Metrics
+## Pending User-Environment Actions (v1 Release Checklist tail)
 
-| Metric | Value |
-|--------|-------|
-| v1 requirements | 32 |
-| Phases | 5 (coarse) |
-| Coverage | 100% (32/32 mapped) |
-| Plans created | 0 |
-| Plans complete | 0 |
-| Calendar days budgeted | 6 + 2 buffer |
-| Days elapsed | 0 |
-| Days remaining to hard deadline | 8 (to 2026-05-15) |
+자동 산출물은 모두 출하 완료. 외부 시스템 액션만 남음:
 
----
+- [ ] DOC-06: 자막 합성 GIF — `assets/demo.mp4` 기반으로 ScreenToGif/ezgif에서 자막 + GIF 변환 → `assets/demo.gif`로 추가.
+- [ ] Focus stroke 비교 PNG에 빨간 화살표 합성 (Figma/Canva 등).
+- [ ] DOC-07: Notion 프로젝트 DB 페이지 작성 + 위시켓 공고 지원서 재제출. ≤ 2026-05-15 (공고 마감 5일 전 버퍼).
 
-## Accumulated Context
-
-### Key Decisions (locked in PROJECT.md / SUMMARY)
-
-- XML Layout (View/Fragment) 채택, Compose 배제 — 클라이언트 코드베이스 호환성 우선
-- 외부 의존성 0 (AndroidX 5종만, Material 미포함)
-- AGP 8.7.3 + Gradle 8.11.1 + Kotlin 2.1.0 + JDK 17 + minSdk 26 / target 35
-- 테마 전환 = `recreate()` + `setTheme()` BEFORE `setContentView()`
-- TTS 중복 억제 = 시간(500ms) + 텍스트 비교 (`speakIfChanged`)
-- 화면 확대/축소 = 콘텐츠 영역 ScaleAnimation (전체 뷰포트 Magnification은 Phase 2)
-- 검증 환경 = Android Studio Emulator + `hw.dPad=yes` AVD + Numpad 매핑 + Google TTS 한국어
-- F-12 SharedPreferences 영속화 P0 승격 (Phase 2 내 처리)
-- F-14 타임아웃 정책 P1 추가 (Phase 4 TIME-01)
-- 시스템 `AccessibilityService` 미등록 — README "Scope" 섹션으로 의도된 범위 한정 명시
-
-### Open Decisions (Day 1)
-
-1. **저장소명** — `android-barrier-free-kiosk-demo` (권장) vs `android-accessibility-kiosk-kotlin`
-2. **AVD 프로필 사양** — `hw.dPad=yes` + Numpad 매핑 + Google TTS 한국어 사전 설치 확정
-3. **시연 영상 형식** — 결정됨: GIF (자막) 인라인 + MP4 링크 둘 다
-
-### Open Decisions (발주처 확인 필요 — 지원 후 위시켓 메시지)
-
-4. "Accessibility Service 제어 경험" — 시스템 서비스 strict 여부. README "Scope" 헤지로 보험.
-5. 화면 확대/축소 — 콘텐츠 영역 vs 전체 뷰포트 (PRD는 콘텐츠 영역 결정)
-
-### Top Risks
-
-- 🔴 **Phase 3 (Day 4)** — Critical pitfall 5개 중 3개(C-3/C-4/C-5)가 집중. 와이어링 순서: FocusNavigator → dispatchKeyEvent → XML `nextFocus*`. 역순 = silent breakage.
-- 🟡 **Phase 5 (Day 6)** — Portfolio pitfall P-1~P-5 (GIF 자막, stroke 가시성, 1스크롤 매핑 표, 저장소명, KWCAG 인용)
-- 🟡 **Phase 2 TTS init race** (C-1) — `@Volatile ready` + pending 큐 누락 시 첫 안내 묵음
-- 🟡 **Phase 2 recreate 좀비 TTS** (C-2) — `object TtsService` + applicationContext
-
-### Blockers
-
-(none)
-
-### Todos (rolling)
-
-- [ ] `/gsd-plan-phase 1`로 Phase 1 plan 분해 (next action)
-- [ ] Day 1 셋업 시 저장소명 확정
-- [ ] Day 1 셋업 시 `hw.dPad=yes` AVD 동작 검증 (Phase 3 위험 차단)
+이 3개는 v1 archive 후에도 polish로 추가 가능. v2 진입과 무관.
 
 ---
 
 ## Session Continuity
 
-**Last session:** 2026-05-07 — Roadmap 초기화 (`gsd-roadmapper`)
-- Read PROJECT.md / REQUIREMENTS.md / research/SUMMARY.md / config.json / PRD.md §8
-- Derived 5 phases from research SUMMARY §6 build order (coarse granularity)
-- Mapped all 32 v1 requirements (100% coverage, 0 orphans)
-- Wrote ROADMAP.md, STATE.md; updated REQUIREMENTS.md Traceability
+**Last session:** 2026-05-07 — v1 마일스톤 완료 + archive
+- 5 phase artifacts(.planning/phases/01..05) 작성/커밋
+- ./gradlew build BUILD SUCCESSFUL (JBR 21 + AGP 8.7.3)
+- AVD 자동 시연 캡처 (4 PNG + mp4 191KB)
+- GitHub 저장소 공개 + 7 commits push
+- v1 archive: milestones/v1-{ROADMAP,REQUIREMENTS}.md
+- ROADMAP.md / PROJECT.md / STATE.md / REQUIREMENTS.md 갱신
 
-**Next session:** Run `/gsd-plan-phase 1` to decompose Phase 1 (Foundation) into executable plans.
+**Next session:** 발주처 응답 또는 평가자 피드백 수신 시 `/gsd-new-milestone v2`.
 
 ---
 
-*State initialized: 2026-05-07*
+*State refreshed: 2026-05-07 after `/gsd-complete-milestone v1`.*
