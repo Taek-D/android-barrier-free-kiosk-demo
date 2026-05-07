@@ -113,48 +113,57 @@
 
 ## Traceability
 
-각 v1 requirement이 어느 Phase에 매핑되는지. Phase 구조는 `ROADMAP.md` 생성 시 채워진다.
+각 v1 requirement이 어느 Phase에 매핑되는지. ROADMAP.md 5-phase 구조 (coarse) 적용.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| BAR-01 | TBD | Pending |
-| BAR-02 | TBD | Pending |
-| BAR-03 | TBD | Pending |
-| TTS-01 | TBD | Pending |
-| TTS-02 | TBD | Pending |
-| TTS-03 | TBD | Pending |
-| TTS-04 | TBD | Pending |
-| TTS-05 | TBD | Pending |
-| HC-01 | TBD | Pending |
-| HC-02 | TBD | Pending |
-| HC-03 | TBD | Pending |
-| HC-04 | TBD | Pending |
-| FOCUS-01 | TBD | Pending |
-| FOCUS-02 | TBD | Pending |
-| FOCUS-03 | TBD | Pending |
-| FOCUS-04 | TBD | Pending |
-| FOCUS-05 | TBD | Pending |
-| MEDIA-01 | TBD | Pending |
-| MEDIA-02 | TBD | Pending |
-| MEDIA-03 | TBD | Pending |
-| TIME-01 | TBD | Pending |
-| CHECK-01 | TBD | Pending |
-| DOC-01 | TBD | Pending |
-| DOC-02 | TBD | Pending |
-| DOC-03 | TBD | Pending |
-| DOC-04 | TBD | Pending |
-| DOC-05 | TBD | Pending |
-| DOC-06 | TBD | Pending |
-| DOC-07 | TBD | Pending |
-| BUILD-01 | TBD | Pending |
-| BUILD-02 | TBD | Pending |
-| BUILD-03 | TBD | Pending |
+| BAR-01 | Phase 1 | Pending |
+| BAR-02 | Phase 1 | Pending |
+| BAR-03 | Phase 1 | Pending |
+| TTS-01 | Phase 2 | Pending |
+| TTS-02 | Phase 2 | Pending |
+| TTS-03 | Phase 2 | Pending |
+| TTS-04 | Phase 2 | Pending |
+| TTS-05 | Phase 2 | Pending |
+| HC-01 | Phase 2 | Pending |
+| HC-02 | Phase 2 | Pending |
+| HC-03 | Phase 2 | Pending |
+| HC-04 | Phase 2 | Pending |
+| FOCUS-01 | Phase 3 | Pending |
+| FOCUS-02 | Phase 3 | Pending |
+| FOCUS-03 | Phase 3 | Pending |
+| FOCUS-04 | Phase 3 | Pending |
+| FOCUS-05 | Phase 3 | Pending |
+| MEDIA-01 | Phase 4 | Pending |
+| MEDIA-02 | Phase 4 | Pending |
+| MEDIA-03 | Phase 4 | Pending |
+| TIME-01 | Phase 4 | Pending |
+| CHECK-01 | Phase 4 | Pending |
+| DOC-01 | Phase 5 | Pending |
+| DOC-02 | Phase 5 | Pending |
+| DOC-03 | Phase 5 | Pending |
+| DOC-04 | Phase 1 | Pending |
+| DOC-05 | Phase 5 | Pending |
+| DOC-06 | Phase 5 | Pending |
+| DOC-07 | Phase 5 | Pending |
+| BUILD-01 | Phase 1 | Pending |
+| BUILD-02 | Phase 1 | Pending |
+| BUILD-03 | Phase 1 | Pending |
 
 **Coverage:**
 - v1 requirements: 32 total
-- Mapped to phases: 0 (pending roadmap)
-- Unmapped: 32 ⚠️ — `gsd-roadmapper`가 채움
+- Mapped to phases: 32 ✓
+- Unmapped: 0
+
+**Phase distribution:**
+- Phase 1 (Foundation): 7 (BUILD-01..03, BAR-01..03, DOC-04)
+- Phase 2 (TTS + Theme): 9 (TTS-01..05, HC-01..04)
+- Phase 3 (Focus & Keypad): 5 (FOCUS-01..05)
+- Phase 4 (Media & Checklist): 5 (MEDIA-01..03, TIME-01, CHECK-01)
+- Phase 5 (Ship): 6 (DOC-01..03, DOC-05..07)
+
+Note on BAR-03: 일차 책임은 Phase 1 (초기 contentDescription 패스). Phase 2 TTS attach 시 누락 보강 재검증을 수행하지만 traceability 카운트는 Phase 1 단일 매핑으로 유지한다.
 
 ---
 *Requirements defined: 2026-05-07*
-*Last updated: 2026-05-07 after initial definition (research-adjusted: F-12 P0 승격, F-6 명시화, F-14 신규)*
+*Last updated: 2026-05-07 after roadmap creation (32/32 mapped to 5 phases)*
