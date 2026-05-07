@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.LinearLayout"
+    tools:layout_width="match_parent"
+    tools:layout_height="@dimen/a11y_bottom_bar_height"
+    tools:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/btn_high_contrast"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:minWidth="@dimen/a11y_min_touch"
+        android:minHeight="@dimen/a11y_min_touch"
+        android:contentDescription="@string/cd_btn_high_contrast"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_a11y_high_contrast"
+        android:scaleType="centerInside"
+        android:focusable="true" />
+
+    <ImageButton
+        android:id="@+id/btn_tts"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:minWidth="@dimen/a11y_min_touch"
+        android:minHeight="@dimen/a11y_min_touch"
+        android:contentDescription="@string/cd_btn_tts"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_a11y_tts"
+        android:scaleType="centerInside"
+        android:focusable="true" />
+
+    <ImageButton
+        android:id="@+id/btn_zoom_in"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:minWidth="@dimen/a11y_min_touch"
+        android:minHeight="@dimen/a11y_min_touch"
+        android:contentDescription="@string/cd_btn_zoom_in"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_a11y_zoom_in"
+        android:scaleType="centerInside"
+        android:focusable="true" />
+
+    <ImageButton
+        android:id="@+id/btn_zoom_out"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:minWidth="@dimen/a11y_min_touch"
+        android:minHeight="@dimen/a11y_min_touch"
+        android:contentDescription="@string/cd_btn_zoom_out"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_a11y_zoom_out"
+        android:scaleType="centerInside"
+        android:focusable="true" />
+
+</merge>

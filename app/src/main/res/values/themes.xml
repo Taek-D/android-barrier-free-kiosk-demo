@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Phase 1 default theme. 고대비 variant(Theme.A11yDemo.HighContrast)는 Phase 2에서 추가. -->
+    <style name="Theme.A11yDemo" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/a11y_primary</item>
+        <item name="colorPrimaryDark">@color/a11y_primary</item>
+        <item name="colorAccent">@color/a11y_primary</item>
+        <item name="android:windowBackground">@color/a11y_surface</item>
+        <item name="android:textColorPrimary">@color/a11y_on_surface</item>
+        <item name="android:textColorSecondary">@color/a11y_text_secondary</item>
+        <item name="android:statusBarColor" tools:targetApi="21">@color/a11y_primary</item>
+    </style>
+</resources>

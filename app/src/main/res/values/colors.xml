@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Phase 1 light palette. 21:1 고대비 팔레트는 Phase 2 themes_high_contrast.xml에서 추가. -->
+    <color name="a11y_primary">#1F6FEB</color>
+    <color name="a11y_on_primary">#FFFFFFFF</color>
+    <color name="a11y_surface">#FFFFFFFF</color>
+    <color name="a11y_on_surface">#FF1A1A1A</color>
+    <color name="a11y_text_secondary">#FF555555</color>
+    <color name="a11y_bottom_bar_bg">#FFEFEFEF</color>
+    <color name="a11y_focus_stroke">#FFD32F2F</color>
+
+    <!-- Adaptive icon placeholder -->
+    <color name="ic_launcher_background">#1F6FEB</color>
+</resources>

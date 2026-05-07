@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="a11y_bottom_bar_height">72dp</dimen>
+    <dimen name="a11y_min_touch">56dp</dimen>
+    <dimen name="a11y_focus_stroke">3dp</dimen>
+</resources>
