@@ -29,4 +29,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <Button
+        android:id="@+id/btn_checklist_back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:minHeight="@dimen/a11y_min_touch"
+        android:text="@string/checklist_back"
+        android:textSize="18sp"
+        android:focusable="true"
+        android:foreground="@drawable/focused_background"
+        android:nextFocusDown="@+id/btn_high_contrast"
+        app:layout_constraintTop_toBottomOf="@id/checklist_placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

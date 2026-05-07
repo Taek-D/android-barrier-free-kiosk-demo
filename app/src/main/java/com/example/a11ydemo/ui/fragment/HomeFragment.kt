@@ -26,6 +26,10 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnOpenMenu.setOnClickListener { navigateTo(MenuFragment()) }
         binding.btnOpenChecklist.setOnClickListener { navigateTo(ChecklistFragment()) }
+        view.post {
+            com.example.a11ydemo.accessibility.FocusNavigator
+                .findFirstFocusable(view)?.requestFocus()
+        }
     }
 
     private fun navigateTo(fragment: Fragment) {

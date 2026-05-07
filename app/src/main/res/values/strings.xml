@@ -18,6 +18,7 @@
     <!-- Checklist -->
     <string name="checklist_title">기능 체크리스트</string>
     <string name="checklist_placeholder">Phase 4에서 7기능(BAR/TTS/HC/FOCUS/MEDIA/TIME) 동작 상태를 표시합니다.</string>
+    <string name="checklist_back">뒤로가기</string>
 
     <!-- Accessibility BottomBar (BAR-03 grep target) -->
     <string name="cd_btn_high_contrast">고대비 모드 켜기 또는 끄기</string>

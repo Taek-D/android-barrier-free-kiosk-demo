@@ -2,4 +2,6 @@
 <resources>
     <!-- 테마별 BottomBar 배경. light: grey, HC: 흑. -->
     <attr name="a11yBottomBarBg" format="color" />
+    <!-- Focus stroke 색상. light: red(#D32F2F), HC: yellow(#FFFF00) -->
+    <attr name="a11yFocusStroke" format="color" />
 </resources>

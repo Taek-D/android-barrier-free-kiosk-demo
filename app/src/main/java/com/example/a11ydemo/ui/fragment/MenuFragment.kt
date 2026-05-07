@@ -25,6 +25,14 @@ class MenuFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view.post {
+            com.example.a11ydemo.accessibility.FocusNavigator
+                .findFirstFocusable(view)?.requestFocus()
+        }
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

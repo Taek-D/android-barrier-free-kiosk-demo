@@ -37,7 +37,10 @@
             android:layout_marginTop="8dp"
             android:minHeight="@dimen/a11y_min_touch"
             android:text="@string/menu_item_americano"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:focusable="true"
+            android:foreground="@drawable/focused_background"
+            android:nextFocusDown="@+id/menu_item_latte" />
 
         <Button
             android:id="@+id/menu_item_latte"
@@ -46,7 +49,11 @@
             android:layout_marginTop="8dp"
             android:minHeight="@dimen/a11y_min_touch"
             android:text="@string/menu_item_latte"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:focusable="true"
+            android:foreground="@drawable/focused_background"
+            android:nextFocusUp="@+id/menu_item_americano"
+            android:nextFocusDown="@+id/menu_item_green_tea" />
 
         <Button
             android:id="@+id/menu_item_green_tea"
@@ -55,7 +62,11 @@
             android:layout_marginTop="8dp"
             android:minHeight="@dimen/a11y_min_touch"
             android:text="@string/menu_item_green_tea"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:focusable="true"
+            android:foreground="@drawable/focused_background"
+            android:nextFocusUp="@+id/menu_item_latte"
+            android:nextFocusDown="@+id/menu_item_confirm" />
 
         <Button
             android:id="@+id/menu_item_confirm"
@@ -64,7 +75,11 @@
             android:layout_marginTop="16dp"
             android:minHeight="@dimen/a11y_min_touch"
             android:text="@string/menu_item_confirm"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:focusable="true"
+            android:foreground="@drawable/focused_background"
+            android:nextFocusUp="@+id/menu_item_green_tea"
+            android:nextFocusDown="@+id/btn_high_contrast" />
 
     </LinearLayout>
 

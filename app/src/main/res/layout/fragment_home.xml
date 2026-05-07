@@ -37,6 +37,9 @@
         android:minHeight="@dimen/a11y_min_touch"
         android:text="@string/home_open_menu"
         android:textSize="18sp"
+        android:focusable="true"
+        android:foreground="@drawable/focused_background"
+        android:nextFocusDown="@+id/btn_open_checklist"
         app:layout_constraintTop_toBottomOf="@id/subtitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -49,6 +52,10 @@
         android:minHeight="@dimen/a11y_min_touch"
         android:text="@string/home_open_checklist"
         android:textSize="18sp"
+        android:focusable="true"
+        android:foreground="@drawable/focused_background"
+        android:nextFocusUp="@+id/btn_open_menu"
+        android:nextFocusDown="@+id/btn_high_contrast"
         app:layout_constraintTop_toBottomOf="@id/btn_open_menu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
