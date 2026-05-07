@@ -11,11 +11,11 @@
 
 ## Phases
 
-- [ ] **Phase 1: Foundation** — 프로젝트 셋업, Activity/Fragment 골격, AVD 준비, A11yPrefs, README placeholder
-- [ ] **Phase 2: TTS + Theme** — TtsService, contentDescription pass, ThemeService, recreate, SharedPreferences 영속화
-- [ ] **Phase 3: Focus & Keypad** — FocusNavigator, dispatchKeyEvent, focused selector, per-Fragment focus order (🔴 HIGHEST RISK)
-- [ ] **Phase 4: Media & Checklist** — VolumeService, ScaleAnimation 줌, ChecklistFragment, 타임아웃 정책
-- [ ] **Phase 5: Ship** — README 마감, GIF/MP4, 표준 인용, GitHub push, Notion DB, 위시켓 재제출
+- [x] **Phase 1: Foundation** — 프로젝트 셋업, Activity/Fragment 골격, AVD 준비, A11yPrefs, README placeholder
+- [x] **Phase 2: TTS + Theme** — TtsService, contentDescription pass, ThemeService, recreate, SharedPreferences 영속화
+- [x] **Phase 3: Focus & Keypad** — FocusNavigator, dispatchKeyEvent, focused selector, per-Fragment focus order (🔴 HIGHEST RISK)
+- [x] **Phase 4: Media & Checklist** — VolumeService, scaleX/Y 줌, ChecklistFragment 7행, 타임아웃 정책
+- [x] **Phase 5: Ship** — README 마감, GIF/MP4 placeholder, 표준 인용, Release Checklist (GitHub push/Notion/위시켓 재제출 = 사용자 환경)
 
 ---
 
@@ -140,13 +140,13 @@ Note: BAR-03 (`contentDescription` grep 검증)은 1차 패스를 Phase 1에서 
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/? | Not started | - |
-| 2. TTS + Theme | 0/? | Not started | - |
-| 3. Focus & Keypad | 0/? | Not started | - |
-| 4. Media & Checklist | 0/? | Not started | - |
-| 5. Ship | 0/? | Not started | - |
+| 1. Foundation | 1/1 | ✅ artifacts (human_needed: build/AVD) | 2026-05-07 |
+| 2. TTS + Theme | 1/1 | ✅ artifacts (human_needed: 발화/HC) | 2026-05-07 |
+| 3. Focus & Keypad | 1/1 | ✅ artifacts (human_needed: D-pad) | 2026-05-07 |
+| 4. Media & Checklist | 1/1 | ✅ artifacts (human_needed: 음량/줌) | 2026-05-07 |
+| 5. Ship | 1/1 | ✅ artifacts (human_needed: Release Checklist) | 2026-05-07 |
 
-(Plan counts populated by `/gsd-plan-phase`)
+모든 자동 산출물 통과. Release Checklist 9 액션은 사용자 환경에서 ≤ 2026-05-15.
 
 ---
 
