@@ -4,12 +4,17 @@
 
 [![Status](https://img.shields.io/badge/status-v1--ready-brightgreen)](.) [![SDK](https://img.shields.io/badge/minSdk-26-blue)](.) [![Kotlin](https://img.shields.io/badge/Kotlin-2.1.0-7F52FF)](.) [![AGP](https://img.shields.io/badge/AGP-8.7.3-3DDC84)](.) [![License](https://img.shields.io/badge/license-MIT-lightgrey)](.)
 
-```
-[ GIF placeholder — 시연 GIF (자막 오버레이) 추가 위치
-  AVD에서 ScreenToGif/OBS로 캡처 → assets/demo.gif → 아래 마크다운 src 교체 ]
-```
+## 시연 자료
 
-<!-- 캡처 후 교체: ![Demo](assets/demo.gif) | [📺 MP4 풀버전](assets/demo.mp4) -->
+| 라이트 테마 | 고대비 (HC) 토글 |
+|------------|------------------|
+| ![Light](assets/01-home-light.png) | ![High Contrast](assets/02-home-hc.png) |
+
+| 메뉴 화면 (zoom 대상) | 7기능 체크리스트 |
+|---------------------|------------------|
+| ![Menu](assets/03-menu.png) | ![Checklist](assets/04-checklist.png) |
+
+📺 [데모 MP4 (Home → 메뉴 → BottomBar D-pad → 고대비 토글)](assets/demo.mp4) — AVD `Medium_Phone_API_36.1` (`hw.dPad=yes`) + Numpad 입력. 자막 합성 GIF는 별도 첨부 예정.
 
 ## 공고 요구사항 ↔ 코드 위치 매핑
 
