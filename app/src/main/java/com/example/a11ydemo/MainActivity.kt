@@ -10,6 +10,8 @@ import com.example.a11ydemo.databinding.ActivityMainBinding
 import com.example.a11ydemo.prefs.A11yPrefs
 import com.example.a11ydemo.service.ThemeService
 import com.example.a11ydemo.service.TtsService
+import com.example.a11ydemo.service.VolumeService
+import com.example.a11ydemo.service.ZoomService
 import com.example.a11ydemo.ui.fragment.HomeFragment
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         A11yPrefs.init(applicationContext)
         TtsService.init(applicationContext)
+        VolumeService.init(applicationContext)
         ThemeService.applyTheme(this)
 
         super.onCreate(savedInstanceState)
@@ -40,7 +43,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        binding.root.post { binding.root.attachA11ySpeakRecursive() }
+        binding.root.post {
+            binding.root.attachA11ySpeakRecursive()
+            // 영속화된 zoom 레벨 적용 (recreate / 재시작 후 복원)
+            ZoomService.apply(binding.fragmentContainer)
+        }
     }
 
     /**
@@ -115,7 +122,11 @@ class MainActivity : AppCompatActivity() {
         binding.accessibilityBottomBar.setOnHighContrastClick {
             ThemeService.toggle(this)
         }
-        binding.accessibilityBottomBar.setOnZoomInClick { /* Phase 4 */ }
-        binding.accessibilityBottomBar.setOnZoomOutClick { /* Phase 4 */ }
+        binding.accessibilityBottomBar.setOnZoomInClick {
+            ZoomService.zoomIn(binding.fragmentContainer)
+        }
+        binding.accessibilityBottomBar.setOnZoomOutClick {
+            ZoomService.zoomOut(binding.fragmentContainer)
+        }
     }
 }

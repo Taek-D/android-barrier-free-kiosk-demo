@@ -23,14 +23,14 @@
 
 | Field | Value |
 |-------|-------|
-| **Current phase** | Phase 3: Focus & Keypad 🔴 |
-| **Next phase** | Phase 3 (in-progress) |
-| **Current plan** | Phase 2 산출물 commit 완료. Phase 3 plan 작성 단계. |
-| **Status** | Phase 2 ✅ artifacts complete (human_needed: 발화/HC 토글 1회 수동) |
-| **Progress** | 2 / 5 phases complete |
+| **Current phase** | Phase 4: Media & Checklist |
+| **Next phase** | Phase 4 (in-progress) |
+| **Current plan** | Phase 3 산출물 commit 완료. Phase 4 plan 작성 단계. |
+| **Status** | Phase 3 ✅ artifacts complete (HIGH RISK closure, human_needed: AVD D-pad 동작 1회) |
+| **Progress** | 3 / 5 phases complete |
 
 ```
-[████████░░░░░░░░░░░░] 40% (2/5 phases)
+[████████████░░░░░░░░] 60% (3/5 phases)
 ```
 
 ---
@@ -41,8 +41,8 @@
 |---|-------|--------|------|-----|
 | 1 | Foundation | ✅ Complete (human-needed) | 🟢 Low | yes |
 | 2 | TTS + Theme | ✅ Complete (human-needed) | 🟡 Med | yes |
-| 3 | Focus & Keypad | In progress | 🔴 **HIGH** | yes |
-| 4 | Media & Checklist | Not started | 🟢 Low | yes |
+| 3 | Focus & Keypad | ✅ Complete (human-needed) | 🔴 **HIGH** | yes |
+| 4 | Media & Checklist | In progress | 🟢 Low | yes |
 | 5 | Ship | Not started | 🟡 Med | no |
 
 ---

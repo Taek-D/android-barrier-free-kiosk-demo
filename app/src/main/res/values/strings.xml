@@ -17,8 +17,27 @@
 
     <!-- Checklist -->
     <string name="checklist_title">기능 체크리스트</string>
-    <string name="checklist_placeholder">Phase 4에서 7기능(BAR/TTS/HC/FOCUS/MEDIA/TIME) 동작 상태를 표시합니다.</string>
     <string name="checklist_back">뒤로가기</string>
+    <string name="volume_up">음량 ▲</string>
+    <string name="volume_down">음량 ▼</string>
+    <string name="cd_volume_up">음량 한 단계 올리기</string>
+    <string name="cd_volume_down">음량 한 단계 내리기</string>
+    <string name="checklist_row_bar_label">BAR — 접근성 컨트롤 바</string>
+    <string name="checklist_row_bar_detail">고대비/TTS/확대/축소 4버튼이 모든 화면 하단에 항상 노출됩니다.</string>
+    <string name="checklist_row_tts_label">TTS — 음성 안내</string>
+    <string name="checklist_row_tts_on">활성. 포커스 변경 시 라벨을 한국어로 발화합니다.</string>
+    <string name="checklist_row_tts_off">비활성. 하단 바 TTS 버튼으로 켤 수 있습니다.</string>
+    <string name="checklist_row_hc_label">HC — 고대비 테마</string>
+    <string name="checklist_row_hc_on">활성. 명도 대비 21:1 (검정/흰색).</string>
+    <string name="checklist_row_hc_off">비활성. 하단 바 고대비 버튼으로 켤 수 있습니다.</string>
+    <string name="checklist_row_focus_label">FOCUS — 키패드 포커스</string>
+    <string name="checklist_row_focus_detail">D-pad 방향키로 이동, ENTER로 클릭, 3dp stroke 인디케이터.</string>
+    <string name="checklist_row_volume_label">MEDIA — 음량</string>
+    <string name="checklist_row_volume_detail">하단 바 ▲▼ 버튼이 시스템 STREAM_MUSIC 음량을 한 단계씩 변경합니다.</string>
+    <string name="checklist_row_zoom_label">MEDIA — 화면 확대/축소</string>
+    <string name="checklist_row_zoom_detail">현재 줌: %1$d%% (0.8x ~ 1.5x). 재시작 후에도 유지됩니다.</string>
+    <string name="checklist_row_time_label">TIME — 타임아웃 정책</string>
+    <string name="checklist_row_time_detail">자동 타임아웃을 두지 않습니다 (KS X 9211 / KWCAG 2.2.1).</string>
 
     <!-- Accessibility BottomBar (BAR-03 grep target) -->
     <string name="cd_btn_high_contrast">고대비 모드 켜기 또는 끄기</string>

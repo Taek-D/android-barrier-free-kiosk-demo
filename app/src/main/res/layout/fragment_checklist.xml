@@ -1,47 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="24dp">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/checklist_title"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/checklist_title"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="?android:attr/textColorPrimary"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <TextView
-        android:id="@+id/checklist_placeholder"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/checklist_placeholder"
-        android:textSize="16sp"
-        android:textColor="?android:attr/textColorSecondary"
-        app:layout_constraintTop_toBottomOf="@id/checklist_title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/checklist_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/checklist_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?android:attr/textColorPrimary" />
 
-    <Button
-        android:id="@+id/btn_checklist_back"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:minHeight="@dimen/a11y_min_touch"
-        android:text="@string/checklist_back"
-        android:textSize="18sp"
-        android:focusable="true"
-        android:foreground="@drawable/focused_background"
-        android:nextFocusDown="@+id/btn_high_contrast"
-        app:layout_constraintTop_toBottomOf="@id/checklist_placeholder"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <LinearLayout
+            android:id="@+id/checklist_rows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_volume_down"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="@dimen/a11y_min_touch"
+                android:text="@string/volume_down"
+                android:textSize="18sp"
+                android:focusable="true"
+                android:foreground="@drawable/focused_background"
+                android:contentDescription="@string/cd_volume_down" />
+
+            <Button
+                android:id="@+id/btn_volume_up"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:minHeight="@dimen/a11y_min_touch"
+                android:text="@string/volume_up"
+                android:textSize="18sp"
+                android:focusable="true"
+                android:foreground="@drawable/focused_background"
+                android:contentDescription="@string/cd_volume_up" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_checklist_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:minHeight="@dimen/a11y_min_touch"
+            android:text="@string/checklist_back"
+            android:textSize="18sp"
+            android:focusable="true"
+            android:foreground="@drawable/focused_background"
+            android:nextFocusUp="@+id/btn_volume_up"
+            android:nextFocusDown="@+id/btn_high_contrast" />
+
+    </LinearLayout>
+
+</ScrollView>
