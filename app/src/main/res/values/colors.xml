@@ -9,6 +9,12 @@
     <color name="a11y_bottom_bar_bg">#FFEFEFEF</color>
     <color name="a11y_focus_stroke">#FFD32F2F</color>
 
+    <!-- Phase 2 high-contrast palette (21:1 black/white, 19.56:1 yellow on black) -->
+    <color name="a11y_hc_background">#FF000000</color>
+    <color name="a11y_hc_on_surface">#FFFFFFFF</color>
+    <color name="a11y_hc_primary">#FFFFFF00</color>
+    <color name="a11y_hc_bottom_bar_bg">#FF000000</color>
+
     <!-- Adaptive icon placeholder -->
     <color name="ic_launcher_background">#1F6FEB</color>
 </resources>

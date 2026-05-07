@@ -18,7 +18,7 @@
         android:id="@+id/accessibility_bottom_bar"
         android:layout_width="0dp"
         android:layout_height="@dimen/a11y_bottom_bar_height"
-        android:background="@color/a11y_bottom_bar_bg"
+        android:background="?attr/a11yBottomBarBg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

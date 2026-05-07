@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 테마별 BottomBar 배경. light: grey, HC: 흑. -->
+    <attr name="a11yBottomBarBg" format="color" />
+</resources>
