@@ -1,0 +1,18 @@
+# Cross-platform line ending policy
+* text=auto
+
+# Shell scripts must remain LF
+*.sh text eol=lf
+gradlew text eol=lf
+
+# Windows scripts
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files (no text conversion)
+*.jar binary
+*.png binary
+*.jpg binary
+*.gif binary
+*.mp4 binary
+*.apk binary
